@@ -5,7 +5,7 @@ export default function Home() {
     {
       title: "Family Photo Share",
       description: "Family photo sharing webapp",
-      link: "https://your-project.vercel.app", // Replace with actual URL
+      link: "https://family-photo-share-d2e8.vercel.app", // Replace with actual URL
       tags: ["Next.js", "React", "Typescript", "Tailwind", "Firebase", "Vercel"],
     },
     {
