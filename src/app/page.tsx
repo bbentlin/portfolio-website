@@ -14,7 +14,7 @@ export default function Home() {
       link: "https://your-project.vercel.app", // Replace with actual URL
       tags: ["Next.js", "React", "Typescript", "Tailwind"]
     },
-    // Add more projects as you create them
+    // Add more projects as they're built 
   ];
 
   return (
