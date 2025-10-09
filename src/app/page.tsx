@@ -6,14 +6,14 @@ export default function Home() {
       title: "Family Photo Share",
       description: "Family photo sharing webapp with real-time updates and secure authentication",
       link: "https://family-photo-share-d2e8.vercel.app",
-      tags: ["Next.js", "React", "Typescript", "Tailwind", "Firebase", "Vercel"],
+      tags: ["Typescript", "React", "Tailwind", "Next.js", "Firebase", "Vercel"],
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       title: "Weather App",
       description: "Real-time weather data and forecasting with beautiful vizualzations",
       link: "https://your-project.vercel.app", // Replace with actual URL
-      tags: ["Next.js", "React", "Typescript", "Tailwind"],
+      tags: ["Typescript", "React","Tailwind", "Next.js", "Vercel"],
       gradient: "from-purple-500 to-pink-500",
     },
   ];
