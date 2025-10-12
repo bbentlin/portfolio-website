@@ -31,7 +31,7 @@ export default function Home() {
     {
       title: "Weather App",
       description: "Real-time weather data and forecasting with beautiful vizualzations",
-      link: "https://your-project.vercel.app", // Replace with actual URL
+      link: "https://weather-app-three-kohl-98.vercel.app", 
       tags: ["Typescript", "React","Tailwind", "Next.js", "Vercel"],
       gradient: "from-purple-500 to-pink-500",
     },
