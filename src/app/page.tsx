@@ -1,6 +1,25 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hide the indicator after scrolling down 100 pixels
+      if (window.scrollY > 100) {
+        setShowScrollIndicator(false);
+      } else {
+        setShowScrollIndicator(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const projects = [
     {
       title: "Family Photo Share",
@@ -62,7 +81,7 @@ export default function Home() {
           <p className="text-xl sm:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             Crafting exceptional digital experiences with
             <span className="text-white/95 font-semibold"> cutting-edge technology</span>,
-            <span className="text-white/95 font-semibold"> pixel-perfect design</span>, and {/* change this line?? */}
+            <span className="text-white/95 font-semibold"> pixel-perfect design</span>, and
             <span className="text-white/95 font-semibold"> scalable architecture</span>.
           </p>
 
@@ -95,7 +114,7 @@ export default function Home() {
 
             <a
               href="mailto:bbentlin@icloud.com"
-              className="group px-8 py-4 bg-white/5 backdrop-blur-xl border-white/10 rounded-xl font-semibold hover:border-white/30 transition-all duration-300 flex items-center gap-2"
+              className="group px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300 flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -105,7 +124,11 @@ export default function Home() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <div 
+            className={`absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce transition-opacity duration-500 ${
+              showScrollIndicator ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
             <svg className="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
