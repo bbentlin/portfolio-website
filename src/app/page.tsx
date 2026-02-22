@@ -57,13 +57,16 @@ export default function Home() {
     },
   ];
 
-  const techStack = [
+  const technologies = [
     { name: "Typescript", color: "from-blue-400 to-blue-600" },
     { name: "React", color: "from-cyan-400 to-cyan-600" },
     { name: "Next.js", color: "from-gray-400 to-gray-600" },
     { name: "Tailwind CSS", color: "from-teal-400 to-teal-600" },
     { name: "Firebase", color: "from-yellow-400 to-orange-500" },
     { name: "Node.js", color: "from-green-400 to-green-600" },
+    { name: "PostgreSQL", color: "from-sky-400 to-indigo-500"},
+    { name: "Prisma", color: "from-indigo-400 to-purple-600"},
+    { name: "Neon", color: "from-emerald-400 to-green-500"},
     { name: "Vercel", color: "from-white/80 to-gray-400" },
   ];
 
@@ -381,28 +384,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tech Stack Section */}
+      {/* Technologies Section */}
       <section className="relative py-32 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <span className="text-sm font-medium px-4 py-2 bg-white/5 backdrop-blur-xl rounded-full border border-white/10 text-white/60 uppercase tracking-widest">
-            Expertise 
+            Expertise
           </span>
           <h2 className="text-5xl sm:text-6xl font-black mt-6 mb-16">
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              Tech Stack
+              Technologies
             </span>
           </h2>
 
           <div className="flex flex-wrap justify-center gap-4">
-            {techStack.map((tech, index) => (
+            {technologies.map((tech, index) => (
               <div
-                key={index}
-                className="group-relative"
+                key={index} 
+                className="group relative"
               >
                 <div
                   className={`absolute -inset-0.5 bg-gradient-to-r ${tech.color} rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-300`}
                 ></div>
-                <div className="relative px-6 py-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-default">
+                <div className={`relative px-6 py-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105 cursor-default bg-gradient-to-r ${tech.color} bg-clip-text text-transparent`}>
                   {tech.name}
                 </div>
               </div>
