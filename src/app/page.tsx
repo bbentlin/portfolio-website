@@ -125,6 +125,44 @@ export default function Home() {
         ))}
       </div>
 
+      {/* Navigation */}
+      <nav className="relative z-10 flex justify-between items-center px-6 py-6 max-w-7xl mx-auto">
+        <a
+          href="/"
+          className="text-lg font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+        >
+          Ben Bentlin
+        </a>
+        <div className="flex items-center gap-6">
+          <a
+            href="/"
+            className="text-sm text-white font-medium"
+          >
+            Work
+          </a>
+          <a
+            href="/about"
+            className="text-sm text-white/60 hover:text-white transition-colors"
+          >
+            About
+          </a>
+          <a
+            href="https://github.com/bbentlin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white/60 hover:text-white transition-colors"
+          >
+            GitHub
+          </a>
+          <a
+            href="mailto:bbentlin@icloud.com"
+            className="text-sm text-white/60 hover:text-white transition-colors"
+          >
+            Contact
+          </a>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
         <div className="max-w-6xl mx-auto text-center space-y-8 z-10">
