@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
@@ -127,25 +128,25 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="relative z-10 flex justify-between items-center px-6 py-6 max-w-7xl mx-auto">
-        <a
+        <Link
           href="/"
           className="text-lg font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
         >
           Ben Bentlin
-        </a>
+        </Link>
         <div className="flex items-center gap-6">
-          <a
+          <Link
             href="/"
             className="text-sm text-white font-medium"
           >
             Work
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="text-sm text-white/60 hover:text-white transition-colors"
           >
             About
-          </a>
+          </Link>
           <a
             href="https://github.com/bbentlin"
             target="_blank"

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function About() {
@@ -62,25 +63,25 @@ export default function About() {
 
       {/* Navigation */}
       <nav className="relative z-10 flex justify-between items-center px-6 py-6 max-w-7xl mx-auto">
-        <a
+        <Link
           href="/"
           className="text-lg font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
         >
           Ben Bentlin
-        </a>
+        </Link>
         <div className="flex items-center gap-6">
-          <a
+          <Link
             href="/"
             className="text-sm text-white/60 hover:text-white transition-colors"
           >
             Work
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="text-sm text-white font-medium"
           >
             About
-          </a>
+          </Link>
           <a
             href="https://github.com/bbentlin"
             target="_blank"
@@ -118,12 +119,11 @@ export default function About() {
           </h1>
 
           <p className="text-xl sm:text-2xl text-white/70 max-w-3xl leading-relaxed">
-            I&apos;m driven by curiosity, craft, and the belief that 
+            I&apos;m driven by curiosity, craft, and the belief that
             <span className="text-white/95 font-semibold">
               {" "}
               good work should actually do something
-            </span>
-            .
+            </span>.
           </p>
         </div>
       </section>
@@ -287,7 +287,7 @@ export default function About() {
             >
               <span className="relative z-10 flex items-center gap-2">
                 Get in Touch
-                <svg 
+                <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                   fill="none"
                   stroke="currentColor"
@@ -303,12 +303,12 @@ export default function About() {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
-            <a
+            <Link
               href="/"
               className="group px-8 py-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl font-semibold hover:bg-white/10 hover:border-white/30 transition-all duration-300 flex items-center gap-2"
             >
               View My Work
-            </a>
+            </Link>
           </div>
         </div>
       </section>
